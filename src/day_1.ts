@@ -24,15 +24,15 @@ console.log(get_max_calories(input_array));
 
 // ======================================================================================
 
-const top_calorie_carriers = {
-  first: 0,
-  second: 0,
-  third: 0,
-};
-
-let first_top_carrier = top_calorie_carriers["first"];
-let second_top_carrier = top_calorie_carriers["second"];
-let third_top_carrier = top_calorie_carriers["third"];
+// const top_calorie_carriers = {
+//   first: 0,
+//   second: 0,
+//   third: 0,
+// };
+//
+// let first_top_carrier = top_calorie_carriers["first"];
+// let second_top_carrier = top_calorie_carriers["second"];
+// let third_top_carrier = top_calorie_carriers["third"];
 
 function get_top_calorie_carriers(arr: number[] | string[]) {
   const calories_of_elf: number[] = [];
@@ -57,6 +57,10 @@ function get_top_calorie_carriers(arr: number[] | string[]) {
   sum_top_three = calories_of_elf.slice(0, 3).reduce((prev, curr) => {
     return prev + curr;
   });
+
+  /***
+    The above code need to be refactored
+  ***/
 
   return sum_top_three;
 }
